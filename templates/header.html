@@ -11,10 +11,6 @@
             <a class="navbar-brand" href="#/"><img src="images/logo3.jpg" alt="logo" /></a>
         </div>
         <div class="content-count-cart-header dropdown" ng-controller="storeController">
-                    <a href="" title="go to shopping cart" class="dropdown-toggle" data-toggle="dropdown" ng-disabled="cart.getTotalCount() < 1">
-                        <i class="fa fa-shopping-cart"></i>
-                        <p class="number-prod-cart">{{cart.getTotalCount()}}</p> 
-                    </a>
                       <div class="dropdown-menu vertical-li dropdown-prod-cart">
                           <ul>
                            <li ng-repeat="item in cart.items | orderBy:'name'">
