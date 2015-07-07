@@ -2,10 +2,14 @@
 	.navbar-header, .navbar-collapse {
 	  width: 100%;
 	}
+	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	  top: 4px;
+	}
 }
 
 .navbar-toggle {
   margin-right: 15px;
+  border: initial;
 }
 
 .container>.navbar-header, .container-fluid>.navbar-header, .container>.navbar-collapse, .container-fluid>.navbar-collapse {
@@ -13,6 +17,22 @@
 	margin-left: 0px;
 }
 
-.navbar-inverse .navbar-toggle {
-  border-color: transparent;
+.nav>li {
+	border-bottom: initial;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+	background-color: #0CC7C7;
+}
+
+.navbar-inverse {
+  height: 60px;
+}
+
+.navbar-header {
+  margin-top: 5px;
+}
+
+.navbar-brand {
+	 padding: 1px 30px;
 }
