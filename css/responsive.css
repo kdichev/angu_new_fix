@@ -1,4 +1,4 @@
-﻿
+
 
 @media only screen and (max-width: 1366px) 
 {
@@ -298,7 +298,7 @@ footer .top-footer-in .col-md-3{
     background-color: #333;
 }
 .navbar-inverse .navbar-toggle:hover .icon-bar, .navbar-inverse .navbar-toggle:focus .icon-bar{
-	background-color: #fff;
+	background-color: black;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: #333;
