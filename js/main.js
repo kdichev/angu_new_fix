@@ -5,18 +5,36 @@
  */
 var app = angular.module('angula', [
   'ngRoute', 'ui.bootstrap', 'ngAnimate', 'ngMaterial'
+]).run(['$anchorScroll', function($anchorScroll) {
+  $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels
+}])
+.controller('SctollCtrl', ['$anchorScroll', '$location', '$scope',
+  function ($anchorScroll, $location, $scope) {
+    $scope.scrollMajnaTo = function(x) {
+        alert(4);
+      /*var newHash = 'anchor' + x;
+      if ($location.hash() !== newHash) {
+        // set the $location.hash to `newHash` and
+        // $anchorScroll will automatically scroll to it
+        $location.hash('anchor' + x);
+      } else {
+        // call $anchorScroll() explicitly,
+        // since $location.hash hasn't changed
+        $anchorScroll();
+      }*/
+    };
+  }
 ]);
-
 /**
  * Configure the Routes
  */
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-    .when("/", { templateUrl: "partials/home.html", controller: "HomeCtrl" })
+    .when("/", { templateUrl: "partials/home4.html", controller: "HomeCtrl" })
     .when("/home2", { templateUrl: "partials/home2.html", controller: "HomeCtrl" })
     .when("/home3", { templateUrl: "partials/home3.html", controller: "HomeCtrl" })
-    .when("/home4", { templateUrl: "partials/home4.html", controller: "HomeCtrl" })
+    .when("/home4", { templateUrl: "partials/home.html", controller: "HomeCtrl" })
     .when("/home5", { templateUrl: "partials/home5.html", controller: "HomeCtrl" })
 
     // About
@@ -56,6 +74,19 @@ app.config(['$routeProvider', function ($routeProvider) {
 app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
   console.log("Blog Controller reporting for duty.");
 });
+
+/**
+ * Controls the ScrollTo
+ */
+app.controller('ScrollCtrl', ['$anchorScroll', '$location', '$scope',
+  function ($anchorScroll, $location, $scope) {
+    $scope.scrollToMajna = function(x) {
+      alert('majna');
+    };
+  }
+]);
+
+
 
 /**
  * Controls all other Pages
@@ -180,7 +211,6 @@ app.controller('HomeCtrl', function ($scope, $interval) {
             $scope.customAttributeValue = step;
          }
     }, duration);
-
 });
 
 app.controller('AccordionDemoCtrl', function ($scope) {
@@ -316,3 +346,12 @@ app.factory("DataService", function () {
         detailsprod: storeDetails
     };
 });
+$(document).ready(function() {
+            /*$(".nav-link").click(function(ev) {
+                ev.preventDefault();
+                ev.stopPropagation();
+                alert('asd');
+                console.log(this);
+            });
+            */
+        })

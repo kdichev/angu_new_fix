@@ -1,9 +1,10 @@
+/* HEADER AND NAV BAR FIXES */
 @media only screen and (max-width: 766px) {
 	.navbar-header, .navbar-collapse {
-	  width: 100%;
+        width: 100%;
 	}
 	.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-	  top: 4px;
+        top: 4px;
 	}
 }
 
@@ -26,65 +27,95 @@
 }
 
 .navbar-inverse {
-  height: 60px;
+    height: 60px;
 }
 
 .navbar-header {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .navbar-brand {
-	 padding: 1px 30px;
+    padding: 1px 0px;
 }
-
-.section, .section-colored {
-  padding: 57px 0;
-}
-
-/* PACE LOADING THEME*/
-.pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-.pace-inactive {
-  display: none;
-}
-
-.pace .pace-progress {
-  background: #29d;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 2px;
-}
-
-.pace .pace-progress {
-  background: #07ccd4;
-  height: 3px;
-}
-
-/*
-    .home {
-        padding-top: 500px;
-    }
-
-    .home4 {
-        padding-top: 500px;
-    }
-*/
 
 .navbar-inverse {
     border-bottom: 0px;
 }
 
-@media only screen and (min-width: 1100px) {
-.container-slide {
-    height: 617px;
+.navbar-brand {
+    padding: 1px 0px;
 }
+
+@media only screen and (max-width: 320px){
+    .navbar-brand img {
+        margin-left: 0px;
+    }
+}
+.section, .section-colored {
+    padding: 57px 0;
+}
+
+/* PACE LOADING THEME */
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: #29d;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
+
+.pace .pace-progress {
+    background: #07ccd4;
+    height: 3px;
+}
+
+/* SLIDE FIX */
+@media only screen and (min-width: 1000px) {
+    .container-slide {
+        height: 92vh;
+}
+
+.slide-banner .btn-primary i {
+  margin-right: 10px;
+}
+    
+.slide-banner h3 {
+  font-size: 26px;
+}
+    
+.price-currency {
+  font-size: 50%;
+}
+
+.time-table {color:#0bb7b7;}
+    
+#clients-home4.parallax-texture {
+  background-image:url(/images/img/barche2.jpg);
+}
+
+.footer-contact {
+    margin: 80px;
+}
+.footer-effect {
+    background-image:url(../images/texture/swirl_pattern.png);
+	background-repeat:repeat !important;
+    }
+    .footer-effect-color {
+    background-color: white;
+    }
+    footer h4 {
+        color: black; }
