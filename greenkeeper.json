@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "js/fullPage/package.json"
+      ]
+    }
+  }
+}
